@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Microsoft.Graph.Site
+@{
+    ViewData["Title"] = "Microsoft Graph Site";
+}
+
+@*Adaptive cards*@
+<script src="https://unpkg.com/@@microsoft/mgt/dist/bundle/mgt-loader.js"></script>
+@*<script src="https://unpkg.com/adaptivecards-templating/dist/adaptivecards-templating.min.js"></script>
+*@
+
+<h2>Microsoft Graph</h2>
+
+<p>
+    <table class="dataTable">
+    <tr>
+        <th>Display Name</th>
+        <th>Created Time</th>
+        <th>Last Modified DateTime</th>
+        <th>ID</th>
+    </tr>
+    <tr class="actionrow">
+        <td>
+           @Model.DisplayName
+        </td>
+        <td >
+            @Model.CreatedDateTime
+        </td>
+        <td>
+            @Model.LastModifiedDateTime
+        </td>
+        <td>
+            @Model.Id
+        </td>
+    </tr>
+
+</table>
+</p>
